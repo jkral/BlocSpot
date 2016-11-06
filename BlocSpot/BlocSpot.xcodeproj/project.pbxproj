@@ -12,6 +12,8 @@
 		1F34E7DD1DC17C2900AB31A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F34E7DB1DC17C2900AB31A5 /* Main.storyboard */; };
 		1F34E7DF1DC17C2900AB31A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F34E7DE1DC17C2900AB31A5 /* Assets.xcassets */; };
 		1F34E7E21DC17C2900AB31A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F34E7E01DC17C2900AB31A5 /* LaunchScreen.storyboard */; };
+		1F34E7EB1DC1869800AB31A5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F34E7EA1DC1869800AB31A5 /* MapKit.framework */; };
+		1FCDA6C71DCE7ABB0066AB83 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCDA6C61DCE7ABB0066AB83 /* LocationSearchTable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		1F34E7DE1DC17C2900AB31A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F34E7E11DC17C2900AB31A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F34E7E31DC17C2900AB31A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F34E7EA1DC1869800AB31A5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		1FCDA6C61DCE7ABB0066AB83 /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F34E7EB1DC1869800AB31A5 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,7 @@
 			children = (
 				1F34E7D61DC17C2900AB31A5 /* BlocSpot */,
 				1F34E7D51DC17C2900AB31A5 /* Products */,
+				1F34E7E91DC1869800AB31A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +62,21 @@
 			children = (
 				1F34E7D71DC17C2900AB31A5 /* AppDelegate.swift */,
 				1F34E7D91DC17C2900AB31A5 /* ViewController.swift */,
+				1FCDA6C61DCE7ABB0066AB83 /* LocationSearchTable.swift */,
 				1F34E7DB1DC17C2900AB31A5 /* Main.storyboard */,
 				1F34E7DE1DC17C2900AB31A5 /* Assets.xcassets */,
 				1F34E7E01DC17C2900AB31A5 /* LaunchScreen.storyboard */,
 				1F34E7E31DC17C2900AB31A5 /* Info.plist */,
 			);
 			path = BlocSpot;
+			sourceTree = "<group>";
+		};
+		1F34E7E91DC1869800AB31A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F34E7EA1DC1869800AB31A5 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,12 +106,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Jeffrey Kral";
 				TargetAttributes = {
 					1F34E7D31DC17C2900AB31A5 = {
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -136,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FCDA6C71DCE7ABB0066AB83 /* LocationSearchTable.swift in Sources */,
 				1F34E7DA1DC17C2900AB31A5 /* ViewController.swift in Sources */,
 				1F34E7D81DC17C2900AB31A5 /* AppDelegate.swift in Sources */,
 			);
@@ -181,6 +202,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -231,6 +253,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -299,6 +322,7 @@
 				1F34E7E81DC17C2900AB31A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
