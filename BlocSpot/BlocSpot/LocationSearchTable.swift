@@ -80,6 +80,9 @@ extension LocationSearchTable {
 extension LocationSearchTable {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)  {
         let selectedItem = matchingItems[indexPath.row].placemark
+        //TODO: Make the location with init method
+        //let location = Location(placemark: selectedItem)
+        //TODO: Add this location to the datamanager and save
         handleMapSearchDelegate?.dropPinZoomIn(placemark: selectedItem)
         dismiss(animated: true, completion: nil)
     }
